@@ -1,4 +1,4 @@
-> This project is on development stage. [![npm version](https://badge.fury.io/js/knott.svg)](https://badge.fury.io/js/knott)
+> This project is in the development stage. [![npm version](https://badge.fury.io/js/knott.svg)](https://badge.fury.io/js/knott)
 
 > Thanks for support and feedback! [![npm downloads](https://img.shields.io/npm/dm/knott.svg)](https://www.npmjs.com/package/knott)
 
