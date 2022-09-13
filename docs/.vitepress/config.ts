@@ -1,7 +1,7 @@
 import { defineConfig, DefaultTheme } from 'vitepress'
 
 const ogDescription = 'Web Component, DOM Styling, Virtual DOM'
-const ogImage = 'https://vitejs.dev/og-image.png'
+const ogImage = 'https://knottjs.netlify.app/og-image.png'
 const ogTitle = 'Knott JS'
 const ogUrl = 'https://knottjs.netlify.app'
 
@@ -36,7 +36,7 @@ export default defineConfig({
   description: 'Web Component, DOM Styling, Virtual DOM',
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: ogTitle }],
     ['meta', { property: 'og:image', content: ogImage }],
@@ -56,7 +56,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
 
     socialLinks: [
       { icon: 'twitter', link: 'https://twitter.com/knottjs' },
