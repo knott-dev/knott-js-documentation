@@ -59,7 +59,7 @@ export default defineConfig({
     logo: '/logo.svg',
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/knottjs' },
+      //{ icon: 'twitter', link: 'https://twitter.com/knottjs' },
       //{ icon: 'discord', link: 'https://chat.knottjs.dev' },
       { icon: 'github', link: 'https://github.com/knott-dev' }
     ],
