@@ -520,6 +520,8 @@ const newButton = () =>
 
 ## Styling
 
+> **Note:** If using [Routing](/#routing) doesn't require to import `style()`.
+
 Set `style()` to **true** to enable functional low-level DOM CSS styling **without writing CSS and no CSS payload.** Up to **50+ different** type of useful utilities and each utility has countless modifier that allows you to fine-tuning the utility more precisely.
 
 [Reference HTML DOM Style OBjects](https://www.w3schools.com/jsref/dom_obj_style.asp)
@@ -583,7 +585,7 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | xHeight | _style.height_ | [Reference](https://www.w3schools.com/jsref/prop_style_height.asp) |
 | xWidth | _style.width_ | [Reference](https://www.w3schools.com/jsref/prop_style_width.asp) |
 
-### CSS ClassName `{classname}-{modifier}`
+> **Note:** CSS class naming look like this `{className}-{value}`.
 
 Enable `style()` and set to `true` to use built-in DOM style CSS utilities.
 
