@@ -16,6 +16,8 @@
 
 And, one more thing, no CSS for sure. That is **DOM Styling Utilities** came with the same package. Almost infinite values in utility classes. A very basic feature is capable to build simple web apps or websites.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0bc0b517-0683-4ddc-a41c-ad5ecb845701/deploy-status)](https://app.netlify.com/sites/knottjs/deploys)
+
 ## Getting Started
 
 ```bash
