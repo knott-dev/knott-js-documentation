@@ -110,6 +110,7 @@
 
 .logo {
   height: 80px !important;
+  padding: 4px !important;
 }
 .VPButton.medium {
   border-radius: 6px !important;
