@@ -53,8 +53,6 @@ const newComponent = (props) =>
       html: `<p></p>`,
       data: [ { a: "1" }, { a: "2" } ],
       keys: ["A","B"],
-      toggle: "id",
-      hover: [ ["id"] ],
       actions: [
         [action, event, ()=>{ f() }],
       ],
@@ -80,8 +78,6 @@ const newComponent = (props) =>
 | **data** | _Object_ [...] | add an array JSON object to an element. Use **keys** to select which object to iterate. |
 | **actions** | _List_ [...] | create event listener to an element to call function(s) when clicked or onload. |
 | **tasks** | _List_ [...] | add on-demand function(s) call when the component is loaded. |
-| **toggle** | _String_ | show or hide target component with an element ID. |
-| **hover** | _List_ | mouse hover with `block` or `visibility` effects, add `opacity`, `duration`. More options (e.g. `[["id", "block", "0.8", "0.3s"]]`) |
 | **vdom** | _Boolean_ | set `true` to display virtual node objects in console. |
 | **slotComponent** | _function_ | import component file by using `import {...} from "...";`. |
 | **customFunction**| _function_ | import custom function calls. |
@@ -250,10 +246,10 @@ const alertButton = () =>
   craft("div", {
     text: "Click Me!",
     actions: [
-      ["add", "click", () => { alert("Clicked Event") }],
-      ["addWindow", "click", () => { alert("Clicked Event") }],
-      ["remove", "click", () => { alert("Clicked Event") }],
-      ["removeWindow", "click", () => { alert("Clicked Event") }],
+      ["add", "click", () => { ... }],
+      ["addWindow", "click", () => { ... }],
+      ["remove", "click", () => { f() }],
+      ["removeWindow", "click", () => { ... }],
     ],
   });
 
@@ -479,22 +475,67 @@ router();
 
 ## Show / Hide Component
 
-| Keys | Params | Descriptions |
+Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` to create basic show/hide element with [Event Listener](#event-listener).
+
+| functions | params | description |
 |:-|:-|:-|
-| **toggle** | `[id]` | show or hide target component with an element ID. |
+| **toggleById()** | `id, classlist[...]` | target effect element by id |
+| **toggleBySelector()** | `selector, classlist[...]` | target effect element by selector |
+| **toggleByIdSelector()** | `id, selector, classlist[...]` | target effect element by id and selector |
 
 ```js
+// Example #1
+
 // component.js
+import { craft } from "knott";
+import { toggleById } from "knott";
+
 const newButton = () =>
   craft("button", {
     text: "Click Me!"
-    toggle: "modal",
+    actions: [
+      ["add", "click", () => {
+        toggleById("modal", [
+          "display-block"
+        ]);
+      }]
+    ],
   });
 
 const newModal = () =>
   craft("div", {
     props: {
       id: "modal",
+      class: "display-none",
+    },
+    text: "This is a Modal"
+  });
+```
+
+```js
+// Example #2
+
+// component.js
+import { craft } from "knott";
+import { toggleBySelector } from "knott";
+
+const newButton = () =>
+  craft("button", {
+    text: "Click Me!"
+    actions: [
+      ["add", "click", () => {
+        toggleById("new-modal", [
+          "display-block"
+        ]);
+      }]
+    ],
+  });
+
+const newModal = () =>
+  craft("new-modal", {
+    props: {
+      id: "modal",
+      class: "display-none",
     },
     text: "This is a Modal"
   });
@@ -502,19 +543,38 @@ const newModal = () =>
 
 ## Hover Effect
 
-| Keys | Params | Descriptions |
+Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` to create basic hover effect with [Event Listener](#event-listener).
+
+| functions | params | description |
 |:-|:-|:-|
-| **hover** | `[[id, block or visibility, opacity, duration]]` | mouse hover with `block` or `visibility` effects, add `opacity`, `duration`. More options (e.g. `[["id", "block", "0.8", "0.3s"]]`) |
+| **toggleById()** | `id, classlist[...]` | target effect element by id |
+| **toggleBySelector()** | `selector, classlist[...]` | target effect element by selector |
+| **toggleByIdSelector()** | `id, selector, classlist[...]` | target effect element by id and selector |
 
 ```js
+// Example #1
+
 // component.js
+import { toggleById } from "knott";
+
 const newButton = () =>
   craft("button", {
     props: {
-      id: "testButton"
-    }
+      id: "thisButton",
+    },
     text: "Hover Me!"
-    hover: [["testButton"]],
+    actions: [
+      ["add", "mouseover", () => {
+        toggleById("thisButton", [
+          "opacity-0.5"
+        ]);
+      }],
+      ["add", "mouseout", () => {
+        toggleById("thisButton", [
+          "opacity-1"
+        ]);
+      }]
+    ],
   });
 ```
 
