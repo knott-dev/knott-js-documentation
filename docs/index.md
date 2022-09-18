@@ -30,6 +30,12 @@ Create an empty template to learn how to use `Knott.js` with CLI (command-line i
 $ npx knott-cli@latest my-new-knott-project
 ```
 
+## Playground 
+
+The [Playground](https://knottjs.netlify.app/playground/) is an online code editor, you can use it for testing or just playing around with `Knott.js` on the go. _If you don't find the **CLI** is more convenient._
+
+[**Launch Playground**](https://knottjs.netlify.app/playground/) now!
+
 ## Create Element
 
 Use `craft()` to create virtual nodes commonly everywhere in the project. It takes a **selector** as a new element, **props** as attributes, **text** as string to put on the document, **html** to add custom _non-virtual-node_ element, optional **actions** as an event listener, **tasks** as custom function calls, and expands the array of children elements in the same node with **expand: [...]**. Read more details below.
