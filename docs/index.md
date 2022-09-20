@@ -8,13 +8,11 @@
 
 ---
 
-# Web Component, Styling, and Virtual DOM.
+# Web Component, Styling, everything runs on memory.
 
 ## Introduction
 
-`Knott.JS` is a tiny (4 kilobytes) **Virtual DOM** JavaScript library for creating object-based web components it's called **virtual nodes** that everything is run on the memory, it's fast!
-
-And, one more thing, no CSS for sure. That is **DOM Styling Utilities** came with the same package. Almost infinite values in utility classes. A very basic feature is capable to build simple web apps or websites.
+**Knott** is a tiny (4 kilobytes) virtual dom library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0bc0b517-0683-4ddc-a41c-ad5ecb845701/deploy-status)](https://app.netlify.com/sites/knottjs/deploys)
 
