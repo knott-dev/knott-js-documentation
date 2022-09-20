@@ -30,7 +30,7 @@ Create an empty template to learn how to use `Knott.js` with CLI (command-line i
 $ npx knott-cli@latest my-new-knott-project
 ```
 
-## Playground 
+## Playground
 
 The [Playground](https://knottjs.netlify.app/playground/) is an online code editor, you can use it for testing or just playing around with `Knott.js` on the go. _If you don't find the **CLI** is more convenient._
 
@@ -471,7 +471,7 @@ pages.forEach((alias) => {
   route(
     alias.path,
     alias.title,
-    alias.template
+    alias.template,
   );
 });
 
@@ -498,11 +498,11 @@ import { toggleById } from "knott";
 
 const newButton = () =>
   craft("button", {
-    text: "Click Me!"
+    text: "Click Me!",
     actions: [
       ["add", "click", () => {
         toggleById("modal", [
-          "display-block"
+          "display-block",
         ]);
       }]
     ],
@@ -514,7 +514,7 @@ const newModal = () =>
       id: "modal",
       class: "display-none",
     },
-    text: "This is a Modal"
+    text: "This is a Modal",
   });
 ```
 
@@ -527,11 +527,11 @@ import { toggleBySelector } from "knott";
 
 const newButton = () =>
   craft("button", {
-    text: "Click Me!"
+    text: "Click Me!",
     actions: [
       ["add", "click", () => {
         toggleById("new-modal", [
-          "display-block"
+          "display-block",
         ]);
       }]
     ],
@@ -543,7 +543,7 @@ const newModal = () =>
       id: "modal",
       class: "display-none",
     },
-    text: "This is a Modal"
+    text: "This is a Modal",
   });
 ```
 
@@ -568,7 +568,7 @@ const newButton = () =>
     props: {
       id: "thisButton",
     },
-    text: "Hover Me!"
+    text: "Hover Me!",
     actions: [
       ["add", "mouseover", () => {
         toggleById("thisButton", [
@@ -717,7 +717,7 @@ mount("root", render(main()));
 style(true); // should execute after the `mount()`
 ```
 
-Create a group of complex style and reuse them anywhere in the project.
+Create a group of complex style components and reuse them anywhere in the project.
 
 ```js
 // Example #4
@@ -767,5 +767,8 @@ const cacheAssets = [
 ];
 
 ```
+
+Thanks for reading.
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
