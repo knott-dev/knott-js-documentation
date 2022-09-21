@@ -34,7 +34,7 @@ The [Playground](https://knottjs.netlify.app/playground/) is an online code edit
 
 [**Launch Playground**](https://knottjs.netlify.app/playground/) now!
 
-![image](playground.png)
+![image](https://knottjs.netlify.app/playground.png)
 
 ### Usage
 
