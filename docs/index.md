@@ -34,6 +34,13 @@ The [Playground](https://knottjs.netlify.app/playground/) is an online code edit
 
 [**Launch Playground**](https://knottjs.netlify.app/playground/) now!
 
+![image](playground.png)
+
+### Usage
+
+- Press **F1** to open Palette menu to access advanced options.
+- Press **Reset** button to delete data stored in the browser.
+
 ## Create Element
 
 Use `craft()` to create virtual nodes commonly everywhere in the project. It takes a **selector** as a new element, **props** as attributes, **text** as string to put on the document, **html** to add custom _non-virtual-node_ element, optional **actions** as an event listener, **tasks** as custom function calls, and expands the array of children elements in the same node with **expand: [...]**. Read more details below.
