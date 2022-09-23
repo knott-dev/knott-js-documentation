@@ -618,13 +618,13 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | font | _style.fontFamily_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontfamily.asp) |
 | fontSize | _style.fontSize_ | 0px |
 | fontStyle | _style.fontStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontstyle.asp) |
-| fontWeight | _vfontWeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontweight.asp) |
+| fontWeight | _style.fontWeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontweight.asp) |
 | height | _style.height_ | [Reference](https://www.w3schools.com/jsref/prop_style_height.asp) |
 | justifyContent | _style.justifyContent_ | [Reference](https://www.w3schools.com/jsref/prop_style_justifycontent.asp) |
 | left | _style.left_ | 0px |
 | lineHeight | _style.lineHeight_ | 0px |
 | listStyle | _style.listStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_liststyle.asp) |
-| marginBottom | _marginBottom_ | 0px |
+| marginBottom | _style.marginBottom_ | 0px |
 | marginLeft | _style.marginLeft_ | 0px |
 | margin | _style.margin_ | 0px |
 | marginRight | _style.marginRight_ | 0px |
@@ -643,7 +643,7 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | textAlign | _style.textAlign_ | [Reference](https://www.w3schools.com/jsref/prop_style_textalign.asp) |
 | textColor | _style.color_ | rgba(0,0,0,0) |
 | textDecoration | _style.textDecoration_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) |
-| textDecorationColor | _style.textDecorationColor | [Reference](https://www.w3schools.com/jsref/prop_style_textdecorationcolor.asp) |
+| textDecorationColor | _style.textDecorationColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecorationcolor.asp) |
 | textOverflow | _style.textOverflow_ | [Reference](https://www.w3schools.com/jsref/prop_style_textoverflow.asp) |
 | textTransform | _style.textTransform_ | [Reference](https://www.w3schools.com/jsref/prop_style_texttransform.asp) |
 | top | _style.top_ | 0px |
