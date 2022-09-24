@@ -600,8 +600,10 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 > Belows are supported DOM style objects.
 
 | Utility | DOM Style Objects | Usage |
-:-|:-|:-|
+|:-|:-|:-|
+| alignContent | _style.alignContent_ | [Reference](https://www.w3schools.com/jsref/prop_style_aligncontent.asp) |
 | alignItems | _style.alignItems_ | 0px |
+| alignSelf | _style.alignSelf_ | [Reference](https://www.w3schools.com/jsref/prop_style_alignself.asp) |
 | bgColor | _style.backgroundColor_ | rgba(0,0,0,0) |
 | borderColor | _style.borderColor_ | rgba(0,0,0,0) |
 | borderRadius | _style.borderRadius_ | 0px |
@@ -609,12 +611,24 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | borderWidth | _style.borderWidth_ | 0px |
 | bottom | _style.bottom_ | 0px |
 | clear | _style.clear_ | [Reference](https://www.w3schools.com/jsref/prop_style_clear.asp) |
+| clip | _style.clip_ | [Reference](https://www.w3schools.com/jsref/prop_style_clip.asp) |
+| columnCount | _style.columnCount_ | [Reference](https://www.w3schools.com/jsref/prop_style_columncount.asp) |
+| columnFill | _style.columnFill_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnfill.asp) |
+| columnGap | _style.columnGap_ | [Reference](https://www.w3schools.com/jsref/prop_style_columngap.asp) |
+| columnRuleColor | _style.columnRuleColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulecolor.asp) |
+| columnRuleStyle | _style.columnRuleStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulestyle.asp) |
+| columnRuleWidth | _style.columnRuleWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulewidth.asp) |
+| columnSpan | _style.columnSpan_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnspan.asp) |
 | cursor | _style.cursor_ | [Reference](https://www.w3schools.com/jsref/prop_style_cursor.asp) |
 | display | _style.display_ | [Reference](https://www.w3schools.com/jsref/prop_style_display.asp) |
 | filter | _style.filter_ | [Filter](https://www.w3schools.com/jsref/prop_style_filter.asp) |
 | flexDirection | _style.flexDirection_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexdirection.asp) |
 | flex | _style.flex_ | [Reference](https://www.w3schools.com/jsref/prop_style_flex.asp) |
+| flexBasis | _style.flexBasis_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexbasis.asp) |
+| flexGrow | _style.flexGrow_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexgrow.asp) |
+| flexShrink | _style.flexShrink_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexshrink.asp) |
 | flexWrap | _style.flexWrap_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexwrap.asp) |
+| float | _style.cssfloat_ | [Reference](https://www.w3schools.com/jsref/prop_style_cssfloat.asp) |
 | font | _style.fontFamily_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontfamily.asp) |
 | fontSize | _style.fontSize_ | 0px |
 | fontStyle | _style.fontStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontstyle.asp) |
@@ -629,21 +643,35 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | margin | _style.margin_ | 0px |
 | marginRight | _style.marginRight_ | 0px |
 | marginTop | _style.marginTop_ | 0px |
+| maxHeight | _style.maxHeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_maxHeight.asp) |
+| minHeight | _style.minHeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_minheight.asp) |
+| maxWidth | _style.maxWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_maxwidth.asp) |
+| minWidth | _style.minWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_minwidth.asp) |
 | objectFit | _style.objectFit_ | [Reference](https://www.w3schools.com/jsref/prop_style_objectfit.asp) |
 | objectPosition | _style.objectPosition_ | [Reference](https://www.w3schools.com/jsref/prop_style_objectposition.asp) |
 | opacity | _style.opacity_ | [Opacity](https://www.w3schools.com/jsref/prop_style_opacity.asp) |
+| order | _style.order_ | [Reference](https://www.w3schools.com/jsref/prop_style_order.asp) |
+| outlineColor | _style.outlineColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinecolor.asp) |
+| outlineStyle | _style.outlineStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinestyle.asp) |
+| outlineOffset | _style.outlineOffset_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlineoffset.asp) |
+| outlineWidth | _style.outlineWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinewidth.asp) |
 | overflow | _style.overflow_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflow.asp) |
+| overflowX | _style.overflowX_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflowx.asp) |
+| overflowY | _style.overflowY_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflowy.asp) |
 | paddingBottom | _style.paddingBottom_ | 0px |
 | paddingLeft | _style.paddingLeft_ | 0px |
 | padding | _style.padding_ | 0px |
 | paddingRight | _style.paddingRight_ | 0px |
 | paddingTop | _style.paddingTop_ | 0px |
 | position | _style.position_ | [Reference](https://www.w3schools.com/jsref/prop_style_position.asp) |
+| resize | _style.resize_ | [Refrence](https://www.w3schools.com/jsref/prop_style_resize.asp) |
 | right | _style.right_ | 0px |
+| scrollBehaviour | _style.scrollBehaviour_ | [Reference](https://www.w3schools.com/jsref/prop_style_scrollbehavior.asp) |
 | textAlign | _style.textAlign_ | [Reference](https://www.w3schools.com/jsref/prop_style_textalign.asp) |
 | textColor | _style.color_ | rgba(0,0,0,0) |
-| textDecoration | _style.textDecoration_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) |
-| textDecorationColor | _style.textDecorationColor | [Reference](https://www.w3schools.com/jsref/prop_style_textdecorationcolor.asp) |
+| textDeco | _style.textDecoration_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) |
+| textDecoColor | _style.textDecorationColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecorationcolor.asp) |
+| textDirection | _style.direction_ | [Reference](https://www.w3schools.com/jsref/prop_style_direction.asp) |
 | textOverflow | _style.textOverflow_ | [Reference](https://www.w3schools.com/jsref/prop_style_textoverflow.asp) |
 | textTransform | _style.textTransform_ | [Reference](https://www.w3schools.com/jsref/prop_style_texttransform.asp) |
 | top | _style.top_ | 0px |
@@ -655,6 +683,7 @@ Set `style()` to **true** to enable functional low-level DOM CSS styling **witho
 | wordWrap | _style.wordWrap_ | [Reference](https://www.w3schools.com/jsref/prop_style_wordwrap.asp) |
 | xHeight | _style.height_ | [Reference](https://www.w3schools.com/jsref/prop_style_height.asp) |
 | xWidth | _style.width_ | [Reference](https://www.w3schools.com/jsref/prop_style_width.asp) |
+| zIndex | _style.zIndex_ | [Reference](https://www.w3schools.com/jsref/prop_style_zindex.asp) |
 
 > **Note:** CSS class naming look like this `{className}-{value}`.
 
