@@ -33,7 +33,7 @@ const additionalTitle = ((): string => {
 export default defineConfig({
   lang: 'en-US',
   title: `Knott.js Documentation`,
-  description: 'Web Component, DOM Styling, Virtual DOM',
+  description: 'Web Component, Styling, everything runs on memory.',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
@@ -59,7 +59,7 @@ export default defineConfig({
     logo: '/logo.svg',
 
     socialLinks: [
-      //{ icon: 'twitter', link: 'https://twitter.com/knottjs' },
+      { icon: 'twitter', link: 'https://twitter.com/knottjs' },
       //{ icon: 'discord', link: 'https://chat.knottjs.dev' },
       { icon: 'github', link: 'https://github.com/knott-dev' }
     ],
