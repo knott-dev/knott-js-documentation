@@ -98,7 +98,7 @@ Create basic component with inline CSS properties.
 ```js
 // Example #1
 
-craft("div", props: { style:"color-red" }, text: "Welcome!");
+craft("div", props: { style:"color:red" }, text: "Welcome!");
 ```
 
 ```js
@@ -159,7 +159,6 @@ import { craft, mount, render } from "knott";
 mount("app", render(
   craft("div", {
     props {
-      class: "text-xs",
       style: "color:white",
     },
     text: "This is Text!",
@@ -349,13 +348,13 @@ export { panelA };
 // Example #1
 
 // component.js
-const css = "font-bold";
+const css = "font-weight:bold";
 const text = "Welcome to Knott JS!";
 
 const newCard = (css, text) =>
   craft("div", {
     props: {
-      class: css,
+      style: css,
     },
     text: text,
   });
@@ -365,13 +364,13 @@ const newCard = (css, text) =>
 // Example #2
 
 // component.js
-const css = "font-bold";
+const css = "font-weight:bold";
 const text = "Knott JS!";
 
 const newCard = (css, text) =>
   craft("div", {
     props: {
-      class: `classA classB classC ${css}`,
+      style: `classA classB classC ${css}`,
     },
     text: `Welcome to ${text}`,
   });
@@ -381,13 +380,13 @@ const newCard = (css, text) =>
 // Example #3
 
 // component.js
-const css = "font-bold";
+const css = "font-weight:bold";
 const text = "Knott JS!";
 
 const newCard = (css, text) =>
   craft("div", {
     html: `
-      <div class=${css}>
+      <div style=${css}>
         ${text}
       </div>
     `,
@@ -416,7 +415,6 @@ const logos = () =>
           const l = document.createElement("div");
           l.innerHTML = `
             <img
-              class="height-6 width-full filter drop-shadow-md"
               src="${item.url}"
               alt=""
               loading="lazy"
@@ -498,7 +496,7 @@ Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` 
 // Example #1
 
 // component.js
-import { craft } from "knott";
+import { craft, design } from "knott";
 import { toggleById } from "knott";
 
 const newButton = () =>
@@ -507,7 +505,7 @@ const newButton = () =>
     actions: [
       ["add", "click", () => {
         toggleById("modal", [
-          "display-block",
+          "display:block",
         ]);
       }]
     ],
@@ -517,17 +515,19 @@ const newModal = () =>
   craft("div", {
     props: {
       id: "modal",
-      class: "display-none",
+      class: "display:none",
     },
     text: "This is a Modal",
   });
+
+design(true);
 ```
 
 ```js
 // Example #2
 
 // component.js
-import { craft } from "knott";
+import { craft, design } from "knott";
 import { toggleBySelector } from "knott";
 
 const newButton = () =>
@@ -536,7 +536,7 @@ const newButton = () =>
     actions: [
       ["add", "click", () => {
         toggleById("new-modal", [
-          "display-block",
+          "display:block",
         ]);
       }]
     ],
@@ -546,10 +546,12 @@ const newModal = () =>
   craft("new-modal", {
     props: {
       id: "modal",
-      class: "display-none",
+      class: "display:none",
     },
     text: "This is a Modal",
   });
+
+design(true);
 ```
 
 ## Hover Effect
@@ -566,7 +568,7 @@ Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` 
 // Example #1
 
 // component.js
-import { toggleById } from "knott";
+import { toggleById, design } from "knott";
 
 const newButton = () =>
   craft("button", {
@@ -577,16 +579,18 @@ const newButton = () =>
     actions: [
       ["add", "mouseover", () => {
         toggleById("thisButton", [
-          "opacity-0.5"
+          "opacity:0.5"
         ]);
       }],
       ["add", "mouseout", () => {
         toggleById("thisButton", [
-          "opacity-1"
+          "opacity:1"
         ]);
       }]
     ],
   });
+  
+design(true);
 ```
 
 ## Styling
