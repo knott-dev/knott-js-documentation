@@ -8,11 +8,11 @@
 
 ---
 
-# Web Component, Styling, everything runs on memory.
+# Web Component, Virtual CSS and Virtual DOM.
 
 ## Introduction
 
-**Knott** is a tiny (4 kilobytes) virtual dom library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
+**Knott** is a tiny [**1.5 kilobytes**](https://bundlephobia.com/package/knott@0.1.8) (minified + gzipped) virtual DOM and virtual CSS library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0bc0b517-0683-4ddc-a41c-ad5ecb845701/deploy-status)](https://app.netlify.com/sites/knottjs/deploys)
 
@@ -591,185 +591,20 @@ const newButton = () =>
 
 ## Styling
 
-> **Note:** If using [Routing](/#routing) doesn't require to import `style()`.
+Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
 
-Set `style()` to **true** to enable functional low-level DOM CSS styling **without writing CSS and no CSS payload.** Up to **50+ different** type of useful utilities and each utility has countless modifier that allows you to fine-tuning the utility more precisely.
+> **Note:** `style()` has removed from **Knott** since **v0.1.8** and refactored to a separated new project called the [Artis](https://artisjs.netlify.app), the Virtual CSS library. `Artis.js` syntax is very different from it's predecessor `style()`.
 
-[Reference HTML DOM Style OBjects](https://www.w3schools.com/jsref/dom_obj_style.asp)
-
-> Belows are supported DOM style objects.
-
-| Utility | DOM Style Objects | Usage |
-|:-|:-|:-|
-| alignContent | _style.alignContent_ | [Reference](https://www.w3schools.com/jsref/prop_style_aligncontent.asp) |
-| alignItems | _style.alignItems_ | 0px |
-| alignSelf | _style.alignSelf_ | [Reference](https://www.w3schools.com/jsref/prop_style_alignself.asp) |
-| bgColor | _style.backgroundColor_ | rgba(0,0,0,0) |
-| borderColor | _style.borderColor_ | rgba(0,0,0,0) |
-| borderRadius | _style.borderRadius_ | 0px |
-| borderStyle | _style.borderStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_borderstyle.asp) |
-| borderWidth | _style.borderWidth_ | 0px |
-| bottom | _style.bottom_ | 0px |
-| clear | _style.clear_ | [Reference](https://www.w3schools.com/jsref/prop_style_clear.asp) |
-| clip | _style.clip_ | [Reference](https://www.w3schools.com/jsref/prop_style_clip.asp) |
-| columnCount | _style.columnCount_ | [Reference](https://www.w3schools.com/jsref/prop_style_columncount.asp) |
-| columnFill | _style.columnFill_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnfill.asp) |
-| columnGap | _style.columnGap_ | [Reference](https://www.w3schools.com/jsref/prop_style_columngap.asp) |
-| columnRuleColor | _style.columnRuleColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulecolor.asp) |
-| columnRuleStyle | _style.columnRuleStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulestyle.asp) |
-| columnRuleWidth | _style.columnRuleWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnrulewidth.asp) |
-| columnSpan | _style.columnSpan_ | [Reference](https://www.w3schools.com/jsref/prop_style_columnspan.asp) |
-| cursor | _style.cursor_ | [Reference](https://www.w3schools.com/jsref/prop_style_cursor.asp) |
-| display | _style.display_ | [Reference](https://www.w3schools.com/jsref/prop_style_display.asp) |
-| filter | _style.filter_ | [Filter](https://www.w3schools.com/jsref/prop_style_filter.asp) |
-| flexDirection | _style.flexDirection_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexdirection.asp) |
-| flex | _style.flex_ | [Reference](https://www.w3schools.com/jsref/prop_style_flex.asp) |
-| flexBasis | _style.flexBasis_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexbasis.asp) |
-| flexGrow | _style.flexGrow_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexgrow.asp) |
-| flexShrink | _style.flexShrink_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexshrink.asp) |
-| flexWrap | _style.flexWrap_ | [Reference](https://www.w3schools.com/jsref/prop_style_flexwrap.asp) |
-| float | _style.cssfloat_ | [Reference](https://www.w3schools.com/jsref/prop_style_cssfloat.asp) |
-| font | _style.fontFamily_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontfamily.asp) |
-| fontSize | _style.fontSize_ | 0px |
-| fontStyle | _style.fontStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontstyle.asp) |
-| fontWeight | _vfontWeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_fontweight.asp) |
-| height | _style.height_ | [Reference](https://www.w3schools.com/jsref/prop_style_height.asp) |
-| justifyContent | _style.justifyContent_ | [Reference](https://www.w3schools.com/jsref/prop_style_justifycontent.asp) |
-| left | _style.left_ | 0px |
-| lineHeight | _style.lineHeight_ | 0px |
-| listStyle | _style.listStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_liststyle.asp) |
-| marginBottom | _marginBottom_ | 0px |
-| marginLeft | _style.marginLeft_ | 0px |
-| margin | _style.margin_ | 0px |
-| marginRight | _style.marginRight_ | 0px |
-| marginTop | _style.marginTop_ | 0px |
-| maxHeight | _style.maxHeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_maxHeight.asp) |
-| minHeight | _style.minHeight_ | [Reference](https://www.w3schools.com/jsref/prop_style_minheight.asp) |
-| maxWidth | _style.maxWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_maxwidth.asp) |
-| minWidth | _style.minWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_minwidth.asp) |
-| objectFit | _style.objectFit_ | [Reference](https://www.w3schools.com/jsref/prop_style_objectfit.asp) |
-| objectPosition | _style.objectPosition_ | [Reference](https://www.w3schools.com/jsref/prop_style_objectposition.asp) |
-| opacity | _style.opacity_ | [Opacity](https://www.w3schools.com/jsref/prop_style_opacity.asp) |
-| order | _style.order_ | [Reference](https://www.w3schools.com/jsref/prop_style_order.asp) |
-| outlineColor | _style.outlineColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinecolor.asp) |
-| outlineStyle | _style.outlineStyle_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinestyle.asp) |
-| outlineOffset | _style.outlineOffset_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlineoffset.asp) |
-| outlineWidth | _style.outlineWidth_ | [Reference](https://www.w3schools.com/jsref/prop_style_outlinewidth.asp) |
-| overflow | _style.overflow_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflow.asp) |
-| overflowX | _style.overflowX_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflowx.asp) |
-| overflowY | _style.overflowY_ | [Reference](https://www.w3schools.com/jsref/prop_style_overflowy.asp) |
-| paddingBottom | _style.paddingBottom_ | 0px |
-| paddingLeft | _style.paddingLeft_ | 0px |
-| padding | _style.padding_ | 0px |
-| paddingRight | _style.paddingRight_ | 0px |
-| paddingTop | _style.paddingTop_ | 0px |
-| position | _style.position_ | [Reference](https://www.w3schools.com/jsref/prop_style_position.asp) |
-| resize | _style.resize_ | [Refrence](https://www.w3schools.com/jsref/prop_style_resize.asp) |
-| right | _style.right_ | 0px |
-| scrollBehaviour | _style.scrollBehaviour_ | [Reference](https://www.w3schools.com/jsref/prop_style_scrollbehavior.asp) |
-| textAlign | _style.textAlign_ | [Reference](https://www.w3schools.com/jsref/prop_style_textalign.asp) |
-| textColor | _style.color_ | rgba(0,0,0,0) |
-| textDeco | _style.textDecoration_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) |
-| textDecoColor | _style.textDecorationColor_ | [Reference](https://www.w3schools.com/jsref/prop_style_textdecorationcolor.asp) |
-| textDirection | _style.direction_ | [Reference](https://www.w3schools.com/jsref/prop_style_direction.asp) |
-| textOverflow | _style.textOverflow_ | [Reference](https://www.w3schools.com/jsref/prop_style_textoverflow.asp) |
-| textTransform | _style.textTransform_ | [Reference](https://www.w3schools.com/jsref/prop_style_texttransform.asp) |
-| top | _style.top_ | 0px |
-| transition | _style.transition_ | [Reference](https://www.w3schools.com/jsref/prop_style_transition.asp) |
-| userSelect | _style.userSelect_ | [Reference](https://www.w3schools.com/jsref/prop_style_userselect.asp) |
-| visibility | _style.visibility_ | [Reference](https://www.w3schools.com/jsref/prop_style_visibility.asp) |
-| whiteSpace | _style.whiteSpace_ | [Reference](https://www.w3schools.com/jsref/prop_style_whitespace.asp) |
-| width | _style.width_ | 0px |
-| wordWrap | _style.wordWrap_ | [Reference](https://www.w3schools.com/jsref/prop_style_wordwrap.asp) |
-| xHeight | _style.height_ | [Reference](https://www.w3schools.com/jsref/prop_style_height.asp) |
-| xWidth | _style.width_ | [Reference](https://www.w3schools.com/jsref/prop_style_width.asp) |
-| zIndex | _style.zIndex_ | [Reference](https://www.w3schools.com/jsref/prop_style_zindex.asp) |
-
-> **Note:** CSS class naming look like this `{className}-{value}`.
-
-Enable `style()` and set to `true` to use built-in DOM style CSS utilities.
+`Artis` also has bundled into `Knott` as external module to use as internal module.
 
 ```js
-// Example #1
-
 // app.js
-import { style } from "knott";
+import { design } from "knott";
 
-// init
-style(true); // should execute after the `mount()`
+design(true); // init artis.js
 ```
 
-```js
-// Example #2
-
-// app.js
-import { craft, mount, render, style } from "knott";
-
-const main = () =>
-  craft("body", {
-    props: {
-      id: "root",
-      class: "display-flex justifyContent-center alignItems-center",
-    },
-    expand: [
-      // all the elements here in the child
-      // are centered in the viewport.
-    ]
-  });
-
-mount("root", render(main()));
-
-// init
-style(true); // should execute after the `mount()`
-```
-
-Create basic and minimal CSS style reset or normalizer.
-
-```js
-// Example #3
-
-// app.js
-import { craft, mount, render, style } from "knott";
-
-const cssReset = `padding-0 margin-0 listStyle-none fontSize-16`;
-
-const main = () =>
-  craft("body", {
-    props: {
-      id: "root",
-      class: `${cssReset} display-flex justifyContent-center alignItems-center`,
-    },
-    expand: [
-      // all the elements here in the child
-      // are centered in the viewport.
-    ]
-  });
-
-mount("root", render(main()));
-
-// init
-style(true); // should execute after the `mount()`
-```
-
-Create a group of complex style components and reuse them anywhere in the project.
-
-```js
-// Example #4
-
-// style.js
-const reset = "margin-0 padding-0 listStyle-none fontSize-16 textColor-black bgColor-white"; // normalizer
-
-const center = "display-flex justifyContent-center alignItems-center";
-const centerCol = `${center} flexDirection-column`;
-const centerRow = `${center} flexDirection-row`;
-
-const paddingWide = "paddingTop-60 paddingBottom-60 paddingLeft-20 paddingRight-20";
-
-// app.js
-import {
-  reset, center, centerCol, centerRow, paddingWide
-} from "./styler";
-```
+Please read the [Artis Documentation](https://artisjs.netlify.app). Or get your hand dirty and try out at [Artis Playground](https://artisjs.netlify.app/playground) for more virtual goodness.
 
 ## Service Worker
 
