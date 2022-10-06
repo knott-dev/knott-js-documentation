@@ -554,7 +554,7 @@ design(true);
 
 Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
 
-![](./artis.svg)
+![](https://knottjs.netlify.app/artis.svg)
 
 > **Note:** `style()` has removed from **Knott** since **v0.1.8** and refactored to a separated new project called the [Artis](https://artisjs.netlify.app), the Virtual CSS library. `Artis.js` syntax is very different from it's predecessor `style()`.
 
