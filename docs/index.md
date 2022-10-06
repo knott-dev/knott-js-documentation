@@ -12,7 +12,7 @@
 
 ## Introduction
 
-**Knott** is a tiny [**1.5 kilobytes**](https://bundlephobia.com/package/knott@0.1.8) (minified + gzipped) virtual DOM and virtual CSS library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
+**Knott** is a tiny [**1.5 kilobytes**](https://bundlephobia.com/package/knott@0.2.0) (minified + gzipped) virtual DOM and virtual CSS library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0bc0b517-0683-4ddc-a41c-ad5ecb845701/deploy-status)](https://app.netlify.com/sites/knottjs/deploys)
 
@@ -48,6 +48,7 @@ Use `craft()` to create virtual nodes commonly everywhere in the project. It tak
 ```js
 // app.js
 import { craft } from "knott";
+//import { craft } from "https://unpkg.com/knott@0.2.0/knott.js";
 
 const newComponent = (props) =>
   craft(
@@ -97,13 +98,11 @@ Create basic component with inline CSS properties.
 
 ```js
 // Example #1
-
 craft("div", props: { style:"color:red" }, text: "Welcome!");
 ```
 
 ```js
 // Example #2
-
 craft("top-header-container", html: `<div class="...">Welcome!</div>`);
 ```
 
@@ -128,17 +127,13 @@ An virtual node with element is rendered into actual document to display on brow
 
 ```js
 // Example #1
-
 // app.js
 import { craft, mount, render } from "knott";
 
 const vNode = () =>
   craft("div", {
-    props {
-      class: "text-xs",
-      style: "color:white",
-    },
-    text = "This is Text!",
+    props { style: "color:white" },
+    text: "This is Text!",
   });
 
 // render as...
@@ -150,7 +145,6 @@ mount("app", render(vNode()));
 
 ```js
 // Example #2
-
 // app.js
 import { craft, mount, render } from "knott";
 
@@ -158,9 +152,7 @@ import { craft, mount, render } from "knott";
 // <div class="..." style="...">...</div>
 mount("app", render(
   craft("div", {
-    props {
-      style: "color:white",
-    },
+    props { class: "color:white" },
     text: "This is Text!",
   });
 ));
@@ -170,7 +162,6 @@ mount("app", render(
 
 ```js
 // Example #3
-
 // app.js
 import { craft, mount, render } from "knott";
 
@@ -209,9 +200,7 @@ import { largeCard } from "component-a"; // as module.
 
 mount("root", render(
   craft("body", {
-    props: {
-      id: "root",
-    },
+    props: { id: "root" },
     expand: [
       largeCard, // imported component as child element in <body id="root">
     ],
@@ -280,9 +269,7 @@ import { craft, mount, render } from "knott";
 
 const panelA = () =>
   craft("div", {
-    props: {
-      id: "idPanelA",
-    },
+    props: { id: "idPanelA" },
     text: "This is Panel A. Click Me!",
     actions: [
       ["add", "click", () => { // or
@@ -330,9 +317,7 @@ const panelA = () =>
       // to be removed
       craft(
         "div", {
-          props: {
-            id: "idPanelB", // <= target
-          },
+          props: { id: "idPanelB", }, // <= target
           text: "Panel B!",
         }
       );
@@ -346,39 +331,32 @@ export { panelA };
 
 ```js
 // Example #1
-
 // component.js
 const css = "font-weight:bold";
 const text = "Welcome to Knott JS!";
 
 const newCard = (css, text) =>
   craft("div", {
-    props: {
-      style: css,
-    },
+    props: { style: css },
     text: text,
   });
 ```
 
 ```js
 // Example #2
-
 // component.js
 const css = "font-weight:bold";
 const text = "Knott JS!";
 
 const newCard = (css, text) =>
   craft("div", {
-    props: {
-      style: `classA classB classC ${css}`,
-    },
+    props: { style: `classA classB classC ${css}` },
     text: `Welcome to ${text}`,
   });
 ```
 
 ```js
 // Example #3
-
 // component.js
 const css = "font-weight:bold";
 const text = "Knott JS!";
@@ -410,19 +388,10 @@ const logos = () =>
   craft("partner-logos", {
     actions: [
       ["addWindow", "load", () => {
-        // loop
         images.forEach((item) => {
           const l = document.createElement("div");
-          l.innerHTML = `
-            <img
-              src="${item.url}"
-              alt=""
-              loading="lazy"
-            />
-          `;
-          document
-            .querySelector("partner-logos")
-            .appendChild(l);
+          l.innerHTML = `<img src="${item.url}" alt="" loading="lazy" />`;
+          document.querySelector("partner-logos").appendChild(l);
         });
         //...
       }],
@@ -444,7 +413,6 @@ _Knott.js_ keeps the routing as simple as possible, just a basic alias in betwee
 
 ```js
 // Example #1
-
 // app.js
 import { route, router } from "knott";
 
@@ -455,9 +423,9 @@ route("/", "Home", homePage);
 router(); // init
 ```
 > **Example #2:** Write more elegantly, organize pages with objects.
+
 ```js
 // Example #2
-
 // app.js
 import { route, router } from "knott";
 
@@ -494,7 +462,6 @@ Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` 
 
 ```js
 // Example #1
-
 // component.js
 import { craft, design } from "knott";
 import { toggleById } from "knott";
@@ -513,10 +480,7 @@ const newButton = () =>
 
 const newModal = () =>
   craft("div", {
-    props: {
-      id: "modal",
-      class: "display:none",
-    },
+    props: { id: "modal", class: "display:none" },
     text: "This is a Modal",
   });
 
@@ -525,7 +489,6 @@ design(true);
 
 ```js
 // Example #2
-
 // component.js
 import { craft, design } from "knott";
 import { toggleBySelector } from "knott";
@@ -544,10 +507,7 @@ const newButton = () =>
 
 const newModal = () =>
   craft("new-modal", {
-    props: {
-      id: "modal",
-      class: "display:none",
-    },
+    props: { id: "modal", class: "display:none" },
     text: "This is a Modal",
   });
 
@@ -566,15 +526,12 @@ Use dedicated helper `toggleById()`, `toggleBySelector()`, `toggleByIdSelector` 
 
 ```js
 // Example #1
-
 // component.js
 import { toggleById, design } from "knott";
 
 const newButton = () =>
   craft("button", {
-    props: {
-      id: "thisButton",
-    },
+    props: { id: "thisButton" },
     text: "Hover Me!",
     actions: [
       ["add", "mouseover", () => {
@@ -589,13 +546,15 @@ const newButton = () =>
       }]
     ],
   });
-  
+
 design(true);
 ```
 
 ## Styling
 
 Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
+
+![](./artis.svg)
 
 > **Note:** `style()` has removed from **Knott** since **v0.1.8** and refactored to a separated new project called the [Artis](https://artisjs.netlify.app), the Virtual CSS library. `Artis.js` syntax is very different from it's predecessor `style()`.
 
@@ -604,6 +563,7 @@ Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
 ```js
 // app.js
 import { design } from "knott";
+//import { design } from "https://unpkg.com/artis@1.0.9/artis.js";
 
 design(true); // init artis.js
 ```
@@ -618,7 +578,6 @@ Import `pwa()` module from `knott` and set parameter to `true`.
 
 ```js
 // Example #1
-
 // app.js
 import { pwa } from "knott";
 
