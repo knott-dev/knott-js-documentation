@@ -572,17 +572,17 @@ Please read the [Artis Documentation](https://artisjs.netlify.app). Or get your 
 
 ## Service Worker
 
-Enable [PWA](https://web.dev/learn/pwa/) service worker to store app assets in browser for offline access.
+Enable [Persistent Caching](https://web.dev/learn/pwa/) service worker to store app assets in browser for offline access.
 
-Import `pwa()` module from `knott` and set parameter to `true`.
+Import `cache()` module from `knott` and set parameter to `true`.
 
 ```js
 // Example #1
 // app.js
-import { pwa } from "knott";
+import { cache } from "knott";
 
 // init
-pwa(true); // should execute after the `mount()`
+cache(true); // should execute after the `mount()`
 ```
 
 Create a new separate file named `sw.js` at the root of the project directory and, add below lines. Edit **CacheName** and **CacheAssets** to suit your need.
