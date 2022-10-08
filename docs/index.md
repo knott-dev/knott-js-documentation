@@ -3,7 +3,7 @@
 > Thanks for support and feedback! [![npm downloads](https://img.shields.io/npm/dm/knott.svg)](https://www.npmjs.com/package/knott)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/knott-dev/knott-js-documentation/main/banner.svg" width="auto" alt="Knott JS">
+  <img src="https://raw.githubusercontent.com/knott-dev/knott-js-documentation/main/docs/public/banner.svg" width="auto" alt="Knott JS">
 </p>
 
 ---
