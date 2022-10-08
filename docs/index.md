@@ -3,7 +3,7 @@
 > Thanks for support and feedback! [![npm downloads](https://img.shields.io/npm/dm/knott.svg)](https://www.npmjs.com/package/knott)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/knott-dev/knott-js/main/banner.png" width="auto" alt="Knott JS">
+  <img src="https://raw.githubusercontent.com/knott-dev/knott-js-documentation/main/banner.svg" width="auto" alt="Knott JS">
 </p>
 
 ---
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-**Knott** is a tiny [**1.5 kilobytes**](https://bundlephobia.com/package/knott@0.2.0) (minified + gzipped) virtual DOM and virtual CSS library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
+**Knott** is a tiny [**1.5 kilobytes**](https://bundlephobia.com/package/knott@0.2.1) (minified + gzipped) virtual DOM and virtual CSS library for building and styling fast, lightweight web components that everything runs on the memory, it's fast!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0bc0b517-0683-4ddc-a41c-ad5ecb845701/deploy-status)](https://app.netlify.com/sites/knottjs/deploys)
 
