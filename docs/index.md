@@ -565,7 +565,7 @@ Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
 import { design } from "knott";
 //import { design } from "https://unpkg.com/artis@1.0.9/artis.js";
 
-design(true); // init artis.js
+window.onload = () => design(true); // init artis.js
 ```
 
 Please read the [Artis Documentation](https://artisjs.netlify.app). Or get your hand dirty and try out at [Artis Playground](https://artisjs.netlify.app/playground) for more virtual goodness.
