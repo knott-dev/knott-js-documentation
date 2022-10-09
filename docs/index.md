@@ -554,21 +554,56 @@ design(true);
 
 Introducing the **Virtual CSS** with [Artis](https://artisjs.netlify.app).
 
-![](https://knottjs.netlify.app/artis.svg)
+![image](https://knottjs.netlify.app/artis.svg)
 
 > **Note:** `style()` has removed from **Knott** since **v0.1.8** and refactored to a separated new project called the [Artis](https://artisjs.netlify.app), the Virtual CSS library. `Artis.js` syntax is very different from it's predecessor `style()`.
 
 `Artis` also has bundled into `Knott` as external module to use as internal module.
 
 ```js
+// Example #1
 // app.js
 import { design } from "knott";
+
+window.onload = () => design(true); // init artis.js
+```
+
+To install [Artis](https://artisjs.netlify.app) separately,
+
+```js
+// Example #1
+$ npm install artis@latest --save-dev
+```
+
+```js
+// Example #2
+// app.js
+import { design } from "artis";
 //import { design } from "https://unpkg.com/artis@1.0.9/artis.js";
 
 window.onload = () => design(true); // init artis.js
 ```
 
 Please read the [Artis Documentation](https://artisjs.netlify.app). Or get your hand dirty and try out at [Artis Playground](https://artisjs.netlify.app/playground) for more virtual goodness.
+
+Or, if you need a more robust design tool to create responsible user interface, introducing the low-level CSS framework, [Weavv CSS](https://weavvcss.netlify.app).
+
+![image](https://knottjs.netlify.app/weavv.svg)
+
+To install [Weavv CSS](https://weavvcss.netlify.app) seperately,
+
+```js
+// Example #1
+$ npm install weavvcss@latest --save-dev
+```
+
+```js
+// Example #2
+// app.js
+import "weavvcss";
+```
+
+If you curious about project [Weavv CSS](https://weavvcss.netlify.app), try at the [Playground](https://weavvcss.netlify.app/playground) without setup anything.
 
 ## Service Worker
 
