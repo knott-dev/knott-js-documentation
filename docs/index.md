@@ -34,12 +34,12 @@ The [Playground](https://knottjs.netlify.app/playground/) is an online code edit
 
 [**Launch Playground**](https://knottjs.netlify.app/playground/) now!
 
-![image](https://knottjs.netlify.app/playground.png)
-
 ### Usage
 
 - Press **F1** to open Palette menu to access advanced options.
 - Press **Reset** button to delete data stored in the browser.
+
+![image](https://knottjs.netlify.app/playground.png)
 
 ## Create Element
 
